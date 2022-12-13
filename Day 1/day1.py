@@ -1,3 +1,4 @@
+import heapq
 # Open file 
 f = open("input1.txt", "r")
 
@@ -16,4 +17,12 @@ for calories in f:
   elfdict[curelf] += int(calories)
 print(elfdict)
 print(max(elfdict.values()))
+calorievalues = list(elfdict.values())
+calorievalues.sort(reverse=True)
+print(calorievalues)
+sum = 0
+for i in range(3):
+  sum += calorievalues[i]
+print(sum)
+
   
